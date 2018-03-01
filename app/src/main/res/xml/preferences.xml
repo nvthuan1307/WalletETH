@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+            android:defaultValue="@string/default_day_night"
+            android:entries="@array/day_night"
+            android:entryValues="@array/day_night_keys"
+            android:key="@string/key_prefs_day_night"
+            android:summary="@string/day_or_night_summary"
+            android:title="@string/day_or_night"/>
+
+    <Preference
+            android:key="@string/key_token"
+            android:title="@string/select_token">
+        <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="org.walleth"
+                android:targetClass="org.walleth.activities.SelectTokenActivity"/>
+    </Preference>
+
+    <Preference
+            android:key="@string/key_reference"
+            android:title="@string/select_fiat_reference">
+        <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="org.walleth"
+                android:targetClass="org.walleth.activities.SelectReferenceActivity"/>
+    </Preference>
+
+    <EditTextPreference
+            android:key="@string/key_prefs_stats_username"
+            android:title="Your name in the stats"/>
+
+    <CheckBoxPreference
+            android:key="@string/key_prefs_start_light"
+            android:title="Start Geth Light Client"
+            android:summary="This makes your phone warm, might crash and use a lot of CPU cycles and bandwidth - but also gives you the warm feeling of helping decentralisation by finding issues in this area."
+    />
+</PreferenceScreen>

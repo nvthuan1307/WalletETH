@@ -1,0 +1,38 @@
+buildscript {
+    ext {
+        kotlin_version = '1.2.10'
+        support_version = '26.1.0'
+        firebase_version = '11.6.2'
+        kethereum_version = '0.34'
+        arch_version = "1.0.0"
+        truth = '0.37'
+    }
+
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'de.mobilej.unmock:UnMockPlugin:0.6.4'
+        classpath 'com.stanfy.spoon:spoon-gradle-plugin:1.2.2'
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.17.0'
+        classpath files('app/libs/gradle-witness.jar')
+        classpath 'com.google.gms:google-services:3.1.1'
+        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.7.2'
+    }
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+allprojects {
+    repositories {
+        maven { url 'https://maven.google.com' }
+        jcenter()
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+        maven { url 'https://jitpack.io' }
+    }
+}

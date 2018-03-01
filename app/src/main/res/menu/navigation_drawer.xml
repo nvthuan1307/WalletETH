@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/menu_switch_network"
+            android:title="@string/nav_drawer_switch_network"
+            android:icon="@drawable/ic_assistant_photo"/>
+
+    <item
+            android:id="@+id/menu_edit"
+            android:title="@string/nav_drawer_edit_account"
+            android:icon="@drawable/ic_editor_mode_edit"/>
+
+    <item
+            android:id="@+id/menu_switch"
+            android:title="@string/nav_drawer_switch_account"
+            android:icon="@drawable/ic_swap_horiz_black_24dp"/>
+
+    <item
+            android:id="@+id/menu_save"
+            android:title="@string/nav_drawer_export_key"
+            android:icon="@drawable/ic_unarchive_black_24dp"/>
+
+    <item
+            android:id="@+id/menu_load"
+            android:title="@string/nav_drawer_import_key"
+            android:icon="@drawable/ic_archive_black_24dp"/>
+
+    <item
+            android:id="@+id/menu_settings"
+            android:title="@string/nav_drawer_settings"
+            android:icon="@drawable/ic_action_settings"/>
+
+    <item
+            android:id="@+id/menu_offline_transaction"
+            android:title="Offline Transaction"
+            android:icon="@drawable/ic_enhanced_encryption_black_24dp"/>
+
+    <item
+            android:id="@+id/menu_debug"
+            android:title="Debug"
+            android:icon="@drawable/ic_adb_black_24dp"/>
+
+</menu>
